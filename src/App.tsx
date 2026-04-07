@@ -152,7 +152,7 @@ export default function App() {
               <Sparkles className="text-tertiary" size={32} />
               <div>
                 <h3 className="text-2xl md:text-4xl font-bold text-tertiary">
-                  APROVECHA ESTAS SUPER OFERTAS!
+                  APROVECHA ESTAS SUPER OFERTAS!.
                 </h3>
                 <p className="text-on-surface-variant text-sm uppercase tracking-widest mt-1">
                   Precios imbatibles por tiempo limitado
