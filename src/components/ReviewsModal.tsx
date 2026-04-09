@@ -58,25 +58,15 @@ export function ReviewsModal({ isOpen, onClose }: ReviewsModalProps) {
                   >
                     <video
                       src={reel.url}
-                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                      className="w-full h-full object-cover"
                       loop
-                      muted
+                      controls
                       playsInline
-                      onMouseOver={(e) => (e.target as HTMLVideoElement).play()}
-                      onMouseOut={(e) => {
-                        const video = e.target as HTMLVideoElement;
-                        video.pause();
-                        video.currentTime = 0;
-                      }}
                     />
                     <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent">
                       <h4 className="text-white font-bold text-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">{reel.title}</h4>
                     </div>
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                      <div className="w-16 h-16 rounded-full bg-primary/20 backdrop-blur-md border border-primary/40 flex items-center justify-center text-primary shadow-[0_0_20px_rgba(86,241,224,0.4)]">
-                        <Play size={32} fill="currentColor" />
-                      </div>
-                    </div>
+
                   </motion.div>
                 ))}
               </div>
@@ -85,7 +75,7 @@ export function ReviewsModal({ isOpen, onClose }: ReviewsModalProps) {
             {/* Footer */}
             <div className="p-4 bg-surface-container-low border-t border-primary/10 text-center">
               <p className="text-on-surface-variant text-[10px] uppercase tracking-[0.2em] font-bold">
-                Pasa el mouse para reproducir
+                Reproduce y controla el volumen de nuestras reseñas
               </p>
             </div>
           </motion.div>
